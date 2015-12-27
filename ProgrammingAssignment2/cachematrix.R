@@ -1,10 +1,13 @@
-###############################################################
-## The functions below calculates and returns the inverse of  #
-## a square matrix, or returns the inverse from               #
-## the cache, if the matrix has been inversed previously      #
-###############################################################
+#####################################################################
+## The functions below calculates and returns the inverse of        #
+## a square matrix, or returns the inverse from                     #
+## the cache, if the matrix has been inverted previously            #
+##                                                                  #  
+## Part of R Programming (Coursera)                                 #
+## (code modified from the Vector example from the assignment page) #
+#####################################################################
 
-## The function makeCacheMatrix(x = matrix,...) functions return a list of functions doing the following:
+## The function makeCacheMatrix(x = matrix,...) returns a list of functions doing the following:
 ##   set the matrix x,
 ##   get the matrix x,
 ##   set the inverse of the matrix x,
@@ -13,7 +16,7 @@
 ##   NOTE: The list of functions is used as input in the function cacheSolve()
 
 makeCacheMatrix <- function(x = matrix()) {
-  # matrix x must be a square invertible matrix 
+  # matrix x must be a invertible square matrix 
   
   inv_matrix = NULL 
   set = function(y) {
@@ -33,7 +36,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## cacheSolve uses the output from makeCacheMatrix() as input,
 ## and returns the inverse of the square matrix used as input to the makeCacheMatrix() function
-## (code modified from the Vector example from the assignment page)
+## The inverse matrix is either calculated or read from the cache (if already calculated)
 
 cacheSolve <- function(x, ...) {
   
