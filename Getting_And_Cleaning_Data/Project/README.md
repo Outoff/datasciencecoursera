@@ -2,6 +2,8 @@
 
 Author: Morten Badensø
 
+Date: February 28th 2016
+
 README file for the Course Project for the course Getting and Cleaning Data on Coursera.
 
 ### Overview

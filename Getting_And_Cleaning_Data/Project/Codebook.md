@@ -2,7 +2,9 @@
 
 Author: Morten Badensø
 
-Codebook for Course Project for the course Getting and Cleaning Data on Coursera.
+Date: February 28th 2016
+
+Codebook for the Course Project for the course Getting and Cleaning Data on Coursera.
 
 ### Source Data: Human Activity Recognition Using Smartphones Data Set 
 The source data used in this project is "Human Activity Recognition Using Smartphones Data Set", and a full description can be
@@ -27,7 +29,7 @@ For each record in the dataset it is provided:
 - Its activity label. 
 - An identifier of the subject who carried out the experiment.
 
-### Workthrough of run_analysis.R script steps
+### Walkthrough of the run_analysis.R script steps
 
 #### Step 1: Import and merge the training and the test sets to create one data set.
 The following datasets are being used in the script:
@@ -48,6 +50,7 @@ In this step, only the ID variables/columns and the columns containing mean and 
 - Subject_id
 - Columns containing "mean()"
 - Columns containing "std()"
+
 And FALSE for every other column. The logical vector is then used to shrink the dataset.
 
 #### Step 3: Uses descriptive activity names to name the activities in the data set
@@ -65,7 +68,3 @@ The column names in the features table is a bit 'dirty', and needs to be cleaned
 #### Step 5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 The last step of the run_analysis.R script created a tidy data set, where the data has been averaged for each variable for each activity and each subject. Thus, 
 for every subject the mean value for the different features (e.g. Body Acceleration) has been calculated for each activity. The tidy data set is written to the chosen working directory.
-
-
-## Section 5. Create a second, independent tidy data set with the average of each variable for each activity and each subject. 
-Per the project instructions, we need to produce only a data set with the average of each veriable for each activity and subject

@@ -21,10 +21,13 @@
 #         All datasets are contained within the ZIP-file mentioned above,
 #         and this script excepts the ZIP-file to be unpacked.
 
+# Set the Working Directory
+setwd('/Users/Morten/Programming/Coursera/Data Science Specialization/Getting_And_Cleaning_Data');
+
 # Import all datasets used in this script
 
 # Feature and Activity_Labels (Mapping tabels) data sets - Import
-features        = read.table('./data/UCI HAR Dataset/features.txt',header=FALSE)
+features        = read.table('/data/UCI HAR Dataset/features.txt',header=FALSE)
 activity_labels = read.table('./data/UCI HAR Dataset/activity_labels.txt',header=FALSE)
 # Add Column Names 
 colnames(activity_labels) = c("activity_Id","activity_Type")
