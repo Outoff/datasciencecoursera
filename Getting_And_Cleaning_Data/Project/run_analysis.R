@@ -61,8 +61,7 @@ TestTrain_data = rbind(Training_Data,Test_Data)
 # Get a list of all column names from TestTrain_Data
 Column_Names <- colnames(TestTrain_data)
 # Create a vector (logical) with TRUE for all columns/variables with mean() and std() (standard deviation)
-# mean and std for X, Y, Z and without dimension.
-# - and TRUE for ID variables (activity_id and subject_id)
+# and TRUE for ID variables (activity_id and subject_id). All other columns are set to FALSE.
 Col_Mean_Std = (grepl("activity..",Column_Names) # First possible Condition for TRUE match (Activity_Id)
                 | grepl("subject..",Column_Names) # Second possible Condition for TRUE match (Subject_Id)
                 | grepl("mean\\(\\)", Column_Names) # Third possible Condition for TRUE match (mean())
